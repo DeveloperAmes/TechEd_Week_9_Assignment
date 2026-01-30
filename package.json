@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.37.0",
+    "db": "^6.0.3",
     "next": "16.1.6",
+    "pg": "^8.17.2",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
