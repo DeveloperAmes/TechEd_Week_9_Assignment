@@ -11,7 +11,7 @@ export default async function UserProfile({ params }) {
     `SELECT * FROM wk9_user_wins WHERE users_id = $1`,
     [userId],
   );
-  console.log(winData.rows);
+  const usersWins = winData.rows;
 
   return (
     <>
@@ -24,9 +24,15 @@ export default async function UserProfile({ params }) {
       </section>
       <section>
         <h3>My Tiny Wins</h3>
-        <div>
-          <p></p>
-        </div>
+        {usersWins.map((win, index) => {
+          const winDate = win.user_win_date.toString().slice(0, 15);
+          return (
+            <div key={index}>
+              <p>{winDate}</p>
+              <p>{win.users_win}</p>
+            </div>
+          );
+        })}
       </section>
     </>
   );
