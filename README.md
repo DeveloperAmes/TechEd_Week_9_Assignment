@@ -5,4 +5,4 @@ What useful external sources helped you complete the assignment (e.g Youtube tut
 What errors or bugs did you encounter while completing your assignment? How did you solve them?
 What went really well and what could have gone better?
 
-Couldn't work out how to get info from both tables at once for the feed
+Couldn't work out how to get info from both tables at once for the feed. Would have looked better to have both the user's name and their win on the main feed so we know which win belongs to who.

@@ -1,6 +1,8 @@
 import { db } from "@/utils/dbConnect";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import EditPostDialog from "@/app/components/EditPostDialog";
+import DeleteButton from "@/app/components/DeleteButton";
 
 export default async function UserProfile({ params }) {
   const { userId } = await params;
@@ -20,6 +22,9 @@ export default async function UserProfile({ params }) {
     notFound();
   }
 
+  // console.log(data);
+  // console.log(winData);
+
   return (
     <>
       <section>
@@ -38,6 +43,12 @@ export default async function UserProfile({ params }) {
             <div key={index}>
               <p>{winDate}</p>
               <p>{win.users_win}</p>
+              <EditPostDialog
+                props={userId}
+                winId={win.id}
+                userId={win.users_id}
+              />
+              <DeleteButton winId={win.id} userId={userId} />
             </div>
           );
         })}
