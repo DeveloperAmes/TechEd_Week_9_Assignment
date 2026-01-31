@@ -1,4 +1,7 @@
 import { db } from "@/utils/dbConnect";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+
 export default async function UserProfile({ params }) {
   const { userId } = await params;
   const userData = await db.query(
@@ -13,6 +16,10 @@ export default async function UserProfile({ params }) {
   );
   const usersWins = winData.rows;
 
+  if (userData.rows.length === 0) {
+    notFound();
+  }
+
   return (
     <>
       <section>
@@ -24,6 +31,7 @@ export default async function UserProfile({ params }) {
       </section>
       <section>
         <h3>My Tiny Wins</h3>
+        <Link href={`/profile/${userId}/create-post`}>Add a new win!</Link>
         {usersWins.map((win, index) => {
           const winDate = win.user_win_date.toString().slice(0, 15);
           return (
