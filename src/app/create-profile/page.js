@@ -18,7 +18,7 @@ export default async function CreateProfile() {
     };
 
     try {
-      db.query(
+      await db.query(
         `INSERT INTO wk9_users (user_id, first_name, last_name, bio) VALUES ($1, $2, $3, $4)`,
         [
           formValues.user_id,
