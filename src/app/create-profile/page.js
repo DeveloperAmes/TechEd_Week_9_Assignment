@@ -18,7 +18,7 @@ export default async function CreateProfile() {
     };
 
     try {
-      await db.query(
+      db.query(
         `INSERT INTO wk9_users (user_id, first_name, last_name, bio) VALUES ($1, $2, $3, $4)`,
         [
           formValues.user_id,
@@ -30,8 +30,8 @@ export default async function CreateProfile() {
     } catch (error) {
       console.error(error);
     }
-    revalidatePath(`profile/${user}`);
-    redirect(`profile/${user}`);
+    revalidatePath(`profile/${userId}`);
+    redirect(`profile/${userId}`);
   }
 
   return (
