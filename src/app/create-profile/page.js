@@ -6,6 +6,8 @@ import { redirect } from "next/navigation";
 export default async function CreateProfile() {
   const { userId } = await auth();
   const user = await currentUser();
+  console.log(userId);
+  console.log(user);
   async function handleSubmit(rawFormData) {
     "use server";
     const formValues = {
@@ -14,6 +16,7 @@ export default async function CreateProfile() {
       last_name: rawFormData.get("last_name"),
       bio: rawFormData.get("bio"),
     };
+
     try {
       await db.query(
         `INSERT INTO wk9_users (user_id, first_name, last_name, bio) VALUES ($1, $2, $3, $4)`,
@@ -27,8 +30,8 @@ export default async function CreateProfile() {
     } catch (error) {
       console.error(error);
     }
-    revalidatePath(`profile/${userId}`);
-    redirect(`profile/${userId}`);
+    revalidatePath(`profile/${user}`);
+    redirect(`profile/${user}`);
   }
 
   return (

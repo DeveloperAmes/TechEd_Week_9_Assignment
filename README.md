@@ -17,7 +17,7 @@ I tried to implement both an edit post and a likes counter to my app. The edit f
 - If you can figure out why my data was not submitting to the database for the edit function, that would be helpful.
 - I also couldn't figure out how to change the size of the clerk avatar when the user is signed in. I tried inspecting the document and using the built-in className to style it, as well as giving it its' own className and trying to style it but nothing worked.
 - I tried to make a join table to be able to extract user information and post information in the same db query, but I couldn't get it to work. Is the way I have done it (using separate queries from both tables) an okay way to extract both the user and win information?
-- I'm not sure what is happening either but when "signing up" as a new user on Vercel, there is an error happening upon the submission of creating their profile (error 405 or 422). It works fine on localhost and I have checked that my env variables match on Vercel.
+- I'm not sure what is happening either but when "signing up" as a new user on Vercel, there is an error happening upon the submission of creating their profile (error 405 or 422). (If this happens to you, just refresh the page manually and then click on the profile icon and you can see that it worked). It works fine without this error happening on localhost and I have checked that my env variables match on Vercel.
 
 ### What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
 
