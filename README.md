@@ -6,7 +6,7 @@ verification code: 424242
 
 ### What requirements did you achieve?
 
-I believe I have achieved all of the standard requirements.
+I believe I have achieved all of the standard requirements and one of the stretch goals (users can delete posts).
 
 ### Were there any requirements or goals that you were unable to achieve? If so, what was it that you found difficult about these tasks?
 
@@ -37,4 +37,4 @@ I'm happy that I got most of the basic functionality finished before the weekend
 
 The styling is again very basic but now that there are more pages/routes to style, it takes a lot longer to do.
 
-I would have liked to have more time to get more of the stretch goals completed but I did need to dedicate more time to interview prep for my interview on Monday.
+I would have liked to have more time to get more of the stretch goals completed, but I did need to dedicate more time to interview prep for my interview on Monday.
