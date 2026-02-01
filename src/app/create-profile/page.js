@@ -30,6 +30,7 @@ export default async function CreateProfile() {
     revalidatePath(`profile/${userId}`);
     redirect(`profile/${userId}`);
   }
+
   return (
     <section>
       <h1>

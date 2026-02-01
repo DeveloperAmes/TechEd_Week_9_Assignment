@@ -9,8 +9,8 @@ export default async function CreatePost() {
   async function handleSubmit(rawFormData) {
     "use server";
     const formValues = {
-      post_date: rawFormData.get("user_win_date"),
-      users_win: rawFormData.get("users_win"),
+      post_date: rawFormData.post("user_win_date"),
+      users_win: rawFormData.post("users_win"),
       users_id: userId,
     };
     try {
