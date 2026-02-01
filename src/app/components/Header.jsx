@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   SignInButton,
   SignUpButton,
@@ -9,15 +10,26 @@ import {
 
 export default function Header() {
   return (
-    <header className="flex items-center">
-      <Image src="/assets/tinywinslogo.png" width={150} height={150} alt="" />
-      <SignedOut>
-        <SignInButton />
-        <SignUpButton />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
+    <header className="flex items-end justify-between">
+      <div className="m-auto">
+        <Link href={"/"}>
+          <Image
+            src="/assets/tinywinslogo.png"
+            width={130}
+            height={130}
+            alt=""
+          />
+        </Link>
+      </div>
+      <div>
+        <SignedOut>
+          <SignInButton className="user-btn" />
+          <SignUpButton className="user-btn" />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </div>
     </header>
   );
 }

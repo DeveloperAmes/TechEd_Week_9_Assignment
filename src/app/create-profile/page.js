@@ -57,7 +57,7 @@ export default async function CreateProfile() {
         ></input>
         <label htmlFor="bio">Bio:</label>
         <textarea name="bio" />
-        <button>Submit</button>
+        <button className="form-btn">Submit</button>
       </form>
     </section>
   );

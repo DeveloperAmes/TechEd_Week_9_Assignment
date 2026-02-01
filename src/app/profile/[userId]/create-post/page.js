@@ -31,8 +31,8 @@ export default async function CreatePost() {
         <label htmlFor="user_win_date">Today&apos;s Date:</label>
         <input type="date" name="user_win_date" required />
         <label htmlFor="users_win">Share your win:</label>
-        <input type="text" name="users_win" required></input>
-        <button>Add post</button>
+        <textarea rows="10" type="text" name="users_win" required />
+        <button className="form-btn">Add post</button>
       </form>
     </section>
   );
