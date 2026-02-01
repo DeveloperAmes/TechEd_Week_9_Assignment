@@ -11,7 +11,7 @@ export default async function CreatePost() {
     const formValues = {
       post_date: rawFormData.post("user_win_date"),
       users_win: rawFormData.post("users_win"),
-      users_id: userId,
+      // users_id: userId,
     };
     try {
       const formData = await db.query(

@@ -23,7 +23,7 @@ export default async function UserProfile({ params }) {
   }
 
   return (
-    <>
+    <main className="min-h-screen">
       <section>
         <h1 className="prof-h1 p-2 mb-4 uppercase">
           {data.first_name}&apos;s Profile
@@ -66,6 +66,6 @@ export default async function UserProfile({ params }) {
           );
         })}
       </section>
-    </>
+    </main>
   );
 }
