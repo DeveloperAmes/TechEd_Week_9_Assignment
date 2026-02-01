@@ -30,7 +30,7 @@ I tried to implement both an edit post and a likes counter to my app. The edit f
 - My console.log() stopped working briefly so I couldn't use this for debugging, but I closed down my VS Code and browser and then it worked again.
 - The initial errors I had were to do with the routes I had set up but Manny and Bertie helped with these.
 - I had an error that kept coming up to do with the date being in object format and needing to be converted to a string to be rendered on the page. I used the toString() method and then was able to slice it so it didn't show the time as well (which was always midnight).
-- I'm not sure what is happening either but when "signing up" as a new user, there is an error happening after the user creates their profile. It works fine on localhost and I have checked that my env variables match on Vercel.
+- I'm not sure what is happening either but when "signing up" as a new user on Vercel, there is an error happening upon the submission of creating their profile (error 405 and 422). It works fine on localhost and I have checked that my env variables match on Vercel.
 
 ### What went really well and what could have gone better?
 
